@@ -1,0 +1,92 @@
+body {
+    font-family: 'K2D';
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'K2D';
+    font-size: 22px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* ----------------------------------------- */
+/* THE CSS FOR POSITIONING ITEMS ON A CIRCLE */
+/* ----------------------------------------- */
+
+.circle-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border: dashed 1px; /* NOTE: BORDER IS FOR GUIDELINES AND WILL BE ERASED LATER*/
+    border-radius: 50%;
+    margin: 1px auto 0;
+}
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin: -2em;
+}
+.circle-container img { display: block; width: 100%; }
+/* .deg0 { transform: translate(12em); } 12em = half the width of the wrapper */
+.deg72 { transform: rotate(72deg) translate(50px) rotate(-72deg); }
+.deg144 { transform: rotate(144deg) translate(50px) rotate(-144deg); }
+.deg216 { transform: rotate(216deg) translate(-20px) rotate(-216deg)}
+.deg288 { transform: rotate(288deg) translate(450px) rotate(-288deg); }
+.deg360 { transform: rotate(360deg) translate(100px) rotate(-360deg); }
+
+/* ---------------------------------------------- */
+/* </ THE CSS FOR POSITIONING ITEMS ON A CIRCLE > */
+/* ---------------------------------------------- */
+
+#bookschat {
+    background-color: rgb(164, 209, 247);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+#techchat {
+    background-color: rgb(248, 208, 251);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+#musicchat {
+    background-color: rgb(255, 180, 223);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+#moviechat {
+    background-color: rgb(249, 222, 118);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+#sportschat {
+    background-color: rgb(169, 254, 165);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
