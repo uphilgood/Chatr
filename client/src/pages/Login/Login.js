@@ -4,8 +4,14 @@ import "./Login.css";
 import API from "../../utils/API";
 import {Redirect} from "react-router-dom"
 import Nav from "../../components/Nav"
+import { withRouter } from 'react-router-dom'
+import Chat from "../Chat/Chat"
+
+
+
 
 class Register extends Component {
+  
   constructor(props) {
     super(props);
 
@@ -15,8 +21,6 @@ class Register extends Component {
       isLoggedIn: false
     };
   }
-
-
 
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
@@ -28,15 +32,18 @@ class Register extends Component {
     });
   }
 
+
   handleSubmit = event => {
     event.preventDefault();
     API.login({username: this.state.email,
-        password: this.state.password})
+        password: this.state.password
+        })
       .then(res =>
         {
         if (res.data === "no user") {
             alert("wrong password")
         } else
+        console.log(res)
         this.setState({ isLoggedIn: true})
         }
       )
@@ -44,11 +51,15 @@ class Register extends Component {
   }
 
   render() {
-    let currentUserEmail = this.state.email  
+   
     const { isLoggedIn } = this.state
 
     if (isLoggedIn === true) {
-      return <Redirect name={this.state.email} to='/chat' />
+      return <Redirect userinfo={this.state.email} to={{
+        pathname: '/chat',
+      state: {
+        email: this.state.email
+      }}} />
     }
     return (
         <div>
