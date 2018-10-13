@@ -2,24 +2,28 @@ import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row } from 'react-materialize'
+import { Col, Row} from 'react-materialize'
+import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import Nav from "../../components/Nav"
 import io from "socket.io-client";
 import Login from "../Login/Login"
+import "../Login/Login.css";
+import ReactDOM from 'react-dom'
 
 
 
 
 class Chat extends Component {
-  componentDidMount() {
-    const {email} = this.props.location.state
-  }
+
   constructor(props) {
     super(props);
 
   
 
     this.state = {
+      email: "",
+      password: "",
+      isLoggedIn: false,
       category: [
         {
           topic: "Tech",
@@ -45,32 +49,83 @@ class Chat extends Component {
         }]
     };
 
-   
+    
 
-    // this.socket = io(this.state.url)
+  }
+  validateForm() {
+    return this.state.email.length > 0 && this.state.password.length > 0;
+  }
 
-    // this.socket.on('RECEIVE_MESSAGE', function (data) {
-    //   addMessage(data);
-    // });
+  handleChange = event => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  }
 
-    // const addMessage = data => {
-    //   console.log(data);
-    //   this.setState({ messages: [...this.state.messages, data] });
-    //   console.log(this.state.messages);
-    // };
 
-    // this.sendMessage = ev => {
-    //   ev.preventDefault();
-    //   this.socket.emit('SEND_MESSAGE', {
-    //     author: this.state.username,
-    //     message: this.state.message
-    //   })
-    //   this.setState({ message: '' })
-
-    // }
+  handleSubmit = event => {
+    event.preventDefault();
+    API.login({username: this.state.email,
+        password: this.state.password
+        })
+      .then(res =>
+        {
+        if (res.data === "no user") {
+            alert("wrong password")
+        } else
+        console.log(res)
+        this.setState({ isLoggedIn: true})
+        }
+      )
+      .catch(err => console.log(err));
   }
 
   render() {
+
+
+    const { isLoggedIn } = this.state
+
+    if (isLoggedIn === false) {
+      return (
+        <div>
+      <div className="Login" >
+        <form onSubmit={this.handleSubmit}>
+          <FormGroup controlId="email" bsSize="large">
+            <ControlLabel>Email</ControlLabel>
+            <FormControl
+              autoFocus
+              type="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup controlId="password" bsSize="large">
+            <ControlLabel>Password</ControlLabel>
+            <FormControl
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+            />
+          </FormGroup>
+          <Button
+            block
+            bsSize="large"
+            disabled={!this.validateForm()}
+            type="submit"
+          >
+            Login
+          </Button>
+        </form>
+      </div>
+      </div>
+    );
+      // return <Redirect userinfo={this.state.email} to={{
+      //   pathname: '/chat',
+      // state: {
+      //   email: this.state.email
+      // }}} />
+    } else {
+
     return (
       <div>
         {this.state.category.map(topic => (
@@ -85,6 +140,8 @@ class Chat extends Component {
       </div>
     );
   }
+  }
 }
+
 
 export default Chat;
