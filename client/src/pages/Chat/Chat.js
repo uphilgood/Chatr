@@ -65,18 +65,18 @@ class Chat extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    API.login({username: this.state.email,
-        password: this.state.password
-        })
-      .then(res =>
-        {
+    API.login({
+      username: this.state.email,
+      password: this.state.password
+    })
+      .then(res => {
         if (res.data === "no user") {
-            alert("wrong password")
-        } else
-        console.log(res)
-        this.setState({ isLoggedIn: true})
+          alert("wrong password")
+        } else {
+          console.log(res)
+          this.setState({ isLoggedIn: true })
         }
-      )
+      })
       .catch(err => console.log(err));
   }
 
@@ -131,7 +131,7 @@ class Chat extends Component {
         {this.state.category.map(topic => (
           <Row>
             <Col size="md-6">
-              <Jumbotron chaturl={topic.url} topic={topic.topic}> 
+              <Jumbotron chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
         
               </Jumbotron>
             </Col>

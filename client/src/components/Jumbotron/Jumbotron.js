@@ -4,7 +4,7 @@ import ChatRoom from "../../pages/ChatRoom/ChatRoom"
 
 const Jumbotron = (props) => (
   <Card header={<CardTitle reveal image='http://www.mericar.com/chat_logo.png' waves='light'/>}
-    reveal={<ChatRoom userinfo={props.user} usethisurl={props.chaturl}/>}>
+    reveal={<ChatRoom user={props.userinfo} usethisurl={props.chaturl}/>}>
     {/* <p>Enter This Chat to talk about {children}!</p> */}
    {props.topic}
 </Card>
