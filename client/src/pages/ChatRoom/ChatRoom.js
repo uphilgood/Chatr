@@ -11,10 +11,11 @@ class ChatRoom extends React.Component{
         this.state = {
             username: '',
             message: '',
-            messages: []
+            messages: [],
+            url: props.usethisurl
         };
 
-        this.socket = io('localhost:3001');
+        this.socket = io(this.state.url);
 
         this.socket.on('RECEIVE_MESSAGE', function(data){
             addMessage(data);
@@ -45,7 +46,7 @@ class ChatRoom extends React.Component{
                     <div className="col-6">
                         <div className="card">
                             <div className="card-body">
-                                <div className="card-title">ChatRoom1</div>
+                                <div className="card-title">{this.state.url}</div>
                                 <hr/>
                                 <div className="messages">
                                 {this.state.messages.map(message => {
@@ -56,12 +57,14 @@ class ChatRoom extends React.Component{
                                 </div>
                             </div>
                             <div className="card-footer">
-                                    <input type="text" placeholder="Username" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control" id="usernamefield"/>
+                
+                            
+                                    <input type="text" placeholder="Choose Your Display Name" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control" id="usernamefield"/>
                                     <br/>
                                     <input type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})} className="form-control"/>
                                     <br/>
                                     <button onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
-
+                            
                             </div>
                         </div>
                     </div>
