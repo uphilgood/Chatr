@@ -30,7 +30,7 @@ class ChatRoom extends React.Component{
         this.sendMessage = ev => {
             ev.preventDefault();
             this.socket.emit('SEND_MESSAGE', {
-                author: this.state.username,
+                author: this.props.user,
                 message: this.state.message
             })
             this.setState({message: ''})
@@ -59,7 +59,7 @@ class ChatRoom extends React.Component{
                             <div className="card-footer">
                 
                             
-                                    <input type="text" placeholder="Choose Your Display Name" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control" id="usernamefield"/>
+                                    <input type="text" placeholder={this.props.user} value={this.props.user} onChange={ev => this.setState({username: ev.target.value})} className="form-control" id="usernamefield"/>
                                     <br/>
                                     <input type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})} className="form-control"/>
                                     <br/>
