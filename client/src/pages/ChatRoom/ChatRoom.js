@@ -1,5 +1,8 @@
 import React from "react";
 import io from "socket.io-client";
+import "./ChatRoom.css"
+import {Row, Col, Chip} from 'react-materialize'
+
 
 
 
@@ -12,7 +15,8 @@ class ChatRoom extends React.Component{
             username: '',
             message: '',
             messages: [],
-            url: props.usethisurl
+            url: props.usethisurl,
+            img:''
         };
 
         this.socket = io(this.state.url);
@@ -41,31 +45,36 @@ class ChatRoom extends React.Component{
 
     render(){
         return (
-            <div className="container">
+            <div className="container"  >
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col s6 m6">
                         <div className="card">
                             <div className="card-body">
-                                <div className="card-title">{this.state.url}</div>
-                                <hr/>
-                                <div className="messages">
+                                <div className="card-title">{this.props.currenttopic}</div>
+                                <hr />
+                            </div>
+                            <div className="messages">
                                 {this.state.messages.map(message => {
-                                  return (
-                                    <div key={message.username}>{message.author}: {message.message}</div>
+                                    return (
+                                        <Row>
+                                            <Col s={12}>
+                                                <Chip key={message.username}>
+                                                    {message.author}
+                                                </Chip>
+                                                {message.message}
+                                            </Col>
+                                        </Row>
                                     )
-                                  })}
-                                </div>
+                                })}
                             </div>
-                            <div className="card-footer">
-                
-                            
-                                    <input type="text" placeholder={this.props.user} value={this.props.user} onChange={ev => this.setState({username: ev.target.value})} className="form-control" id="usernamefield"/>
-                                    <br/>
-                                    <input type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})} className="form-control"/>
-                                    <br/>
-                                    <button onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
-                            
-                            </div>
+                        </div>
+                        <div className="card-action">
+                            <input type="text" placeholder={this.props.user} value={this.props.user} onChange={ev => this.setState({ username: ev.target.value })} className="form-control" id="usernamefield" />
+                            <br />
+                            <input type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} className="form-control" />
+                            <br />
+                            <button onClick={this.sendMessage} className="waves-effect btn">Send</button>
+
                         </div>
                     </div>
                 </div>
@@ -74,4 +83,7 @@ class ChatRoom extends React.Component{
     }
 }
 
+
+
 export default ChatRoom;
+
