@@ -7,10 +7,10 @@ import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import Nav from "../../components/Nav"
 import io from "socket.io-client";
 import Login from "../Login/Login"
-import "../Login/Login.css";
+import "./Chat.css"
 import ReactDOM from 'react-dom'
-
-
+import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import ChatRoom from "../ChatRoom/ChatRoom"
 
 
 class Chat extends Component {
@@ -27,23 +27,28 @@ class Chat extends Component {
       category: [
         {
           topic: "Tech",
+          img:'http://icons-for-free.com/free-icons/png/512/2890572.png',
           _id: 1, 
           url: 'localhost:3001'
         }, {
           topic: "Music",
+          img:'https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/music.png',
           _id: 2, 
           url: 'localhost:3001/chat2'
         }, {
           topic: "Sports",
+          img:'https://www.shareicon.net/download/2016/08/18/814410_game_512x512.png',
           _id: 3, 
           url: 'localhost:3001/chat3'
         }, {
           topic: "Movies",
+          img:'https://www.shareicon.net/download/2016/07/05/791306_cinema_512x512.png',
           _id: 4, 
           url: 'localhost:3001/chat4'
         },
         {
           topic: "Books",
+          img:'https://i.imgur.com/kCSiMNB.png',
           _id: 5, 
           url: 'localhost:3001/chat5'
         }]
@@ -119,29 +124,28 @@ class Chat extends Component {
       </div>
       </div>
     );
-      // return <Redirect userinfo={this.state.email} to={{
-      //   pathname: '/chat',
-      // state: {
-      //   email: this.state.email
-      // }}} />
     } else {
 
     return (
       <div>
-        {this.state.category.map(topic => (
+      <img src="https://i.imgur.com/0HoUggK.png" alt="chatr" className="center"/>
+      <div>
+        <Row>
+ {this.state.category.map(topic => (
           <Row>
             <Col size="md-6">
-              <Jumbotron chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
+              <Jumbotron cardimage={topic.img} chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
         
               </Jumbotron>
             </Col>
           </Row>
-        ))}
-      </div>
-    );
-  }
-  }
-}
+        ))} 
+        </Row>
+        </div>
+        </div>
+        )}}}
 
+        
+  
 
 export default Chat;

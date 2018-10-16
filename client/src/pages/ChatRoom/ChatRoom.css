@@ -1,0 +1,27 @@
+body {
+    font-family: 'Montserrat Alternates';
+}
+.books-card-title {
+    color: white;
+    background-color: rgb(168, 242, 153);
+    font-family: 'Montserrat Alternates';
+    font-size: 42px;
+    width: 100%;
+}
+.card-content {
+    color: rgb(168, 242, 153);
+    font-family: 'Montserrat Alternates';
+    font-size: 22px;    
+}
+.card-action {
+    color: rgb(168, 242, 153);
+    font-family: 'Montserrat Alternates';
+    font-size: 22px;    
+    
+}
+input {
+    border-radius: 5px;
+    height: 30px;
+    color: rgb(168, 242, 153);
+}
+
