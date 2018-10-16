@@ -1,0 +1,44 @@
+@media all and (min-width: 480px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+
+  .center {
+        display: block;
+        margin: 0 auto; 
+  }
+  
+  .Login {
+    padding: 60px 0;
+    min-height: 575px;
+    animation: chatrLogin 15s linear infinite, chatrScale 1s linear infinite;
+    animation-fill-mode: forwards;
+    background-color: #e9ebee;
+    background-image: url("../../public/images/font-awesome/android-brands.svg"), url("../../public/images/font-awesome/apple-brands.svg"), url("../../public/images/font-awesome/book-solid.svg"), url("../../public/images/font-awesome/cat-solid.svg"), url("../../public/images/font-awesome/dog-solid.svg"), url("../../public/images/font-awesome/football-ball-solid.svg"), url("../../public/images/font-awesome/futbol-solid.svg"), url("../../public/images/font-awesome/glasses-solid.svg"), url("../../public/images/font-awesome/twitch-brands.svg"), url("../../public/images/font-awesome/css3-alt-brands.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%;
+  }
+
+  @keyframes chatrLogin {
+    0%, 100% { background-position: 70%  40%, 12% 20%, 30% 37%, 45% 90%, 80% 25%, 60% 82%, 2% 50%, 83% 70%, 2% 10%, 22% 75%;}
+    50% {      background-position: 65%  55%, 18% 20%, 29% 44%, 40% 80%, 90% 25%, 62% 90%, 10% 56%, 98% 78%, 5% 10%, 15% 85%;}
+  }
+
+  @keyframes chatrScale {
+    0%, 100% { background-size: 4%, 3.9%, 4%, 3.9%, 4%, 3.9%, 4%, 3.9%, 4%, 3.9%;}
+    50% {      background-size: 3.9%, 4%, 3.9%, 4%, 3.9%, 4%, 3.9%, 4%, 3.9%, 4%;}
+  }
+
+
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px grey;
+  }
+}

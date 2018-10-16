@@ -7,12 +7,10 @@ import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import Nav from "../../components/Nav"
 import io from "socket.io-client";
 import Login from "../Login/Login"
-import "../Login/Login.css";
+import "./Chat.css"
 import ReactDOM from 'react-dom'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import ChatRoom from "../ChatRoom/ChatRoom"
-
-
 
 
 class Chat extends Component {
@@ -126,11 +124,6 @@ class Chat extends Component {
       </div>
       </div>
     );
-      // return <Redirect userinfo={this.state.email} to={{
-      //   pathname: '/chat',
-      // state: {
-      //   email: this.state.email
-      // }}} />
     } else {
 
     return (

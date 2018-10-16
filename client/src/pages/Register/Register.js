@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import "../Login/Login.css";
+import "../Chat/Chat.css"
 import API from "../../utils/API";
 
 
