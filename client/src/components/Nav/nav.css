@@ -1,0 +1,30 @@
+@media all and (min-width: 480px) {
+/* nav .brand-logo {
+    background: url("../../public/images/chatr-logo.png");
+    width: 100px;
+  } */
+
+nav .nav-wrapper {
+position: relative;
+height: 120%;
+background-color: #272A33;
+}
+
+.navbar-brand {
+    margin: -2px 10px;
+    font-size: 1.1em;
+    transition: .2s ease-in-out;
+}
+
+/* nav ul a:hover {
+    color: #669ACC;
+    background-color: none;
+    height: 125%;
+    margin: -7px, 0;
+ } */
+
+ .navbar-brand:hover {
+     color:#669ACC !important;
+ }
+
+}
