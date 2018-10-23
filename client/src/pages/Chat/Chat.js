@@ -39,33 +39,33 @@ class Chat extends Component {
           img: techLogo,
           _id: 1, 
           className: "techChat",
-          url: 'localhost:3001'
+          url: 'https://cryptic-wave-62324.herokuapp.com/'
         }, {
           topic: "Music",
           img: musicLogo,
           _id: 2, 
           className: "musicChat",
-          url: 'localhost:3001/chat2'
+          url: 'https://cryptic-wave-62324.herokuapp.com/chat2'
 
         }, {
           topic: "Sports",
           img: sportsLogo,
           _id: 3, 
           className: "sportsChat",
-          url: 'localhost:3001/chat3'
+          url: 'https://cryptic-wave-62324.herokuapp.com/chat3'
         }, {
           topic: "Movies",
           img: moviesLogo,
           _id: 4, 
           className: "moviesChat",
-          url: 'localhost:3001/chat4'
+          url: 'https://cryptic-wave-62324.herokuapp.com/chat4'
         },
         {
           topic: "Books",
           img: booksLogo,
           _id: 5, 
           className: "booksChat",
-          url: 'localhost:3001/chat5'
+          url: 'https://cryptic-wave-62324.herokuapp.com/chat5'
         }]
     };
 
