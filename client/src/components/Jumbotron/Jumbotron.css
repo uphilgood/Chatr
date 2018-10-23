@@ -1,0 +1,44 @@
+section {
+    background: gray;
+}
+
+.hidden {
+    display: none;
+}
+
+#techChat {
+    background: #F8DF76;
+    transition: .2s ease-in-out;
+}
+
+#musicChat {
+    background: pink;
+    transition: .2s ease-in-out;
+}
+
+#sportsChat {
+    background: #F0D1E4;
+    transition: .2s ease-in-out;
+}
+
+#moviesChat {
+    background: #A6D1F0;
+    transition: .2s ease-in-out;
+}
+
+#booksChat {
+    background: #AFD794;
+    transition: .2s ease-in-out;
+}
+
+#chatButtons {
+    float: right;
+}
+
+.grid {
+    display: grid;
+}
+
+.one-chat {
+    height: 500px;
+}
