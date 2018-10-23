@@ -1,5 +1,6 @@
 @media all and (min-width: 480px) {
   html, body {
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100%;
@@ -11,6 +12,7 @@
   }
   
   .Login, .footerMain {
+    font-family: 'Source Sans Pro', sans-serif;
     padding: 60px 0;
     min-height: 575px;
     animation: chatrLogin 15s linear infinite, chatrScale 1s linear infinite;
@@ -89,7 +91,7 @@ input:not([type]):not([readonly]):focus, input[type=text]:not([readonly]):not(.b
 }
 
 .card .card-content {
-  font-family: fantasy;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #3c76aa;
   padding: 5px 0 10px 0;
 }
