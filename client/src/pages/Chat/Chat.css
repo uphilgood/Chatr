@@ -111,7 +111,6 @@ input:not([type]):not([readonly]):focus, input[type=text]:not([readonly]):not(.b
   100% { transform: scale(1); }
 }
 
-
 /* need to adjust this for the circles */
 .card {
   padding: 5px 0 10px 0;

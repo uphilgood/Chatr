@@ -17,6 +17,12 @@ import musicLogo from '../../public/images/font-awesome/musicChat.png';
 import sportsLogo from '../../public/images/font-awesome/sportsChat.png';
 import moviesLogo from '../../public/images/font-awesome/moviesChat.png';
 import booksLogo from '../../public/images/font-awesome/booksChat.png';
+// Importing Animation Libraries
+// import anime from 'animejs'
+// import animationTimings from './common/animationTimings';
+// import Transition from 'react-transition-group/Transition';
+// import TransitionGroup from 'react-transition-group/TransitionGroup';
+// 
 
 class Chat extends Component {
 
@@ -32,27 +38,33 @@ class Chat extends Component {
           topic: "Tech",
           img: techLogo,
           _id: 1, 
+          className: "techChat",
           url: 'localhost:3001'
         }, {
           topic: "Music",
           img: musicLogo,
           _id: 2, 
+          className: "musicChat",
           url: 'localhost:3001/chat2'
+
         }, {
           topic: "Sports",
           img: sportsLogo,
           _id: 3, 
+          className: "sportsChat",
           url: 'localhost:3001/chat3'
         }, {
           topic: "Movies",
           img: moviesLogo,
           _id: 4, 
+          className: "moviesChat",
           url: 'localhost:3001/chat4'
         },
         {
           topic: "Books",
           img: booksLogo,
           _id: 5, 
+          className: "booksChat",
           url: 'localhost:3001/chat5'
         }]
     };
@@ -140,16 +152,15 @@ class Chat extends Component {
         <Row style={{display: 'flex', justifyContent: 'center'}}>
  {this.state.category.map(topic => (
           <Col size="xs-12 md-6 lg-4 xl-4">
-            <Col size="md-1 lg-1 xl-1"></Col>
-            <Jumbotron cardimage={topic.img} chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
+            <Jumbotron cardimage={topic.img} className={topic.className} chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
       
             </Jumbotron>
-            <Col size="md-1 lg-1 xl-1"></Col>
           </Col>
         ))} 
         </Row>
         </div>
-        <div className="footerMain"></div>
+        <div className = "footerMain"></div>
+        <div className = "chat1"></div>
         </div>
         )}}}
 
