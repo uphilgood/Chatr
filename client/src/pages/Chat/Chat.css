@@ -21,13 +21,13 @@
     /* background-image: url("../../public/images/font-awesome/android-brands.svg"), url("../../public/images/font-awesome/apple-brands.svg"), url("../../public/images/font-awesome/book-solid.svg"), url("../../public/images/font-awesome/cat-solid.svg"), url("../../public/images/font-awesome/dog-solid.svg"), url("../../public/images/font-awesome/football-ball-solid.svg"), url("../../public/images/font-awesome/futbol-solid.svg"), url("../../public/images/font-awesome/glasses-solid.svg"), url("../../public/images/font-awesome/twitch-brands.svg"), url("../../public/images/font-awesome/css3-alt-brands.svg");
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%; */
-    background-image: url("../../public/images/font-awesome/movie1.png"), url("../../public/images/font-awesome/movie2.png"), url("../../public/images/font-awesome/book1.png"), url("../../public/images/font-awesome/tech1.png"), url("../../public/images/font-awesome/sports2.png"), url("../../public/images/font-awesome/book2.png"), url("../../public/images/font-awesome/tech2.png"), url("../../public/images/font-awesome/music2.png"), url("../../public/images/font-awesome/music1.png"), url("../../public/images/font-awesome/sports1.png"), url("../../public/images/font-awesome/tech3.png");
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-image: url("../../public/images/font-awesome/movie1.png"), url("../../public/images/font-awesome/movie2.png"), url("../../public/images/font-awesome/book1.png"), url("../../public/images/font-awesome/tech1.png"), url("../../public/images/font-awesome/sports2.png"), url("../../public/images/font-awesome/book2.png"), url("../../public/images/font-awesome/tech2.png"), url("../../public/images/font-awesome/music2.png"), url("../../public/images/font-awesome/music1.png"), url("../../public/images/font-awesome/sports1.png"), url("../../public/images/font-awesome/tech3.png"), url("../../public/images/font-awesome/music3.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   }
 
   @keyframes chatrLogin {
-    0%, 100% { background-position: 70%  40%, 12% 20%, 30% 37%, 45% 90%, 82% 24%, 60% 82%, 2% 50%, 83% 70%, 2% 10%, 22% 75%, 75% 15%;}
-    50% {      background-position: 65%  55%, 18% 20%, 29% 44%, 40% 80%, 92% 25%, 62% 90%, 10% 56%, 98% 78%, 5% 10%, 15% 85%, 70% 12% ;}
+    0%, 100% { background-position: 70%  40%, 12% 20%, 30% 37%, 45% 90%, 82% 24%, 60% 82%, 2% 50%, 83% 70%, 2% 10%, 22% 75%, 75% 15%, 35% 7%;}
+    50% {      background-position: 65%  55%, 18% 20%, 29% 44%, 40% 80%, 92% 25%, 62% 90%, 10% 56%, 98% 78%, 5% 10%, 15% 85%, 70% 12%, 47% 13%;}
   }
 
   @keyframes chatrScale {
