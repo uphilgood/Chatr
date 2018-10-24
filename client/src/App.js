@@ -12,6 +12,8 @@ import Register from "./pages/Register";
 import Nav from "./components/Nav";
 
 const App = () => (
+
+  
   <div>
   <Nav />
   <Router>
