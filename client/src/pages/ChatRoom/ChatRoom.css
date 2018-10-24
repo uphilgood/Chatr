@@ -60,7 +60,7 @@ input {
 
 .modal-footer {
     background: #E9EBEE !important;
-    height: 130px;
+    height: 130px !important;
 }
 
 .modal-footer button {
