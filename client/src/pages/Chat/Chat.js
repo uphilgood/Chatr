@@ -26,8 +26,12 @@ import booksLogo from '../../public/images/font-awesome/booksChat.png';
 
 class Chat extends Component {
 
+
   constructor(props) {
     super(props);
+
+
+  const PORT = process.env.PORT || 3001;
 
     this.state = {
       email: "",
@@ -39,13 +43,13 @@ class Chat extends Component {
           img: techLogo,
           _id: 1, 
           className: "techChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/'
+          url: PORT
         }, {
           topic: "Music",
           img: musicLogo,
           _id: 2, 
           className: "musicChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat2'
+          url: PORT + '/chat2'
 
         }, {
           topic: "Sports",
