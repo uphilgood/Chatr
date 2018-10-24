@@ -25,3 +25,106 @@ input {
     color: rgb(168, 242, 153);
 }
 
+.chatBox-title {
+    border-radius: 0;
+    font-family: fantasy;
+    color: #3c76aa;
+    padding: 0.15em;
+    background: #272A33;
+    border-radius: 5px !important;
+}
+
+.chatBox-send {
+    width: 350px;
+    margin: auto;
+    display: block;
+    margin-top: -25px;
+    background: #3c76aa;
+}
+
+.chatBox-send:focus {
+    background:#272A33;
+}
+
+.chatBox-send:send {
+    background: #3c76aa;
+}
+
+/* This is the messaging text that you send */
+.chip {
+    background: #3FACFC;
+    color: white;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+/* .modal-content {
+    background:red !important;
+} */
+
+#usernamefield, .form-control {
+    background: rgba(255,255,255, 0.8) !important;
+    border-radius: 5px !important;
+}
+
+.modal-footer {
+    background: #E9EBEE !important;
+    height: 130px !important;
+}
+
+.modal-footer button {
+    background:#696363 !important;
+    color: white;
+    transition: .2s ease-in-out;
+    margin-right: 1.5em !important;
+    width: 100px;
+}
+
+.modal-footer button:hover {
+    transform: scale(1.1em) !important;
+}
+
+.modal-content {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 60px 0;
+    min-height: 575px;
+    animation: chatrLogin 10s linear infinite, chatrScale 1s linear infinite;
+    animation-fill-mode: forwards;
+    background-color: white;
+    /* background-image: url("../../public/images/font-awesome/android-brands.svg"), url("../../public/images/font-awesome/apple-brands.svg"), url("../../public/images/font-awesome/book-solid.svg"), url("../../public/images/font-awesome/cat-solid.svg"), url("../../public/images/font-awesome/dog-solid.svg"), url("../../public/images/font-awesome/football-ball-solid.svg"), url("../../public/images/font-awesome/futbol-solid.svg"), url("../../public/images/font-awesome/glasses-solid.svg"), url("../../public/images/font-awesome/twitch-brands.svg"), url("../../public/images/font-awesome/css3-alt-brands.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%; */
+    background-image: url("../../public/images/font-awesome/music3.png"), url("../../public/images/font-awesome/tech3.png"), url("../../public/images/font-awesome/sports1.png"), 
+    url("../../public/images/font-awesome/music1.png"), url("../../public/images/font-awesome/music2.png"), url("../../public/images/font-awesome/tech2.png"),  
+    url("../../public/images/font-awesome/book2.png"),  url("../../public/images/font-awesome/sports2.png"),  url("../../public/images/font-awesome/tech1.png"), 
+    url("../../public/images/font-awesome/book1.png"),  url("../../public/images/font-awesome/movie2.png"), url("../../public/images/font-awesome/movie1.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  }
+
+  @keyframes chatrLogin {
+    0%, 100% { background-position: 51%  60%, 23% 25%, 34% 49%, 45% 85%, 97% 30%, 76% 70%, 15% 61%, 100% 83%, 10% 15%, 20% 90%, 75% 17%, 52% 18%;}
+    50% { background-position: 67%  46%, 18% 26%, 36% 43%, 51% 96%, 88% 30%, 68% 96%, 8% 56%, 89% 76%, 8% 16%, 28% 81%, 81% 21%, 41% 13%;}      
+  }
+
+  @keyframes chatrScale {
+    0%, 100% { background-size: 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%;}
+    50% {      background-size: 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%;}
+  }
+
+  .modal {
+      margin-top: -.1em !important;
+      width: 65% !important;
+      max-height: 80%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+  }
+
+  .modal-card {
+    min-height: 13em;
+    background: rgba(255,255,255, 0.8) !important;
+  }
+
+  .modal-container {
+    width: 85%;
+  }
+

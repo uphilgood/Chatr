@@ -11,12 +11,14 @@ import "./Chat.css";
 import ReactDOM from 'react-dom';
 // import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import ChatRoom from "../ChatRoom/ChatRoom";
+import loginlogo from "../../public/images/chatr-login.png";
 import logo from "../../public/images/chatr-logo.png";
 import techLogo from '../../public/images/font-awesome/techChat.png';
 import musicLogo from '../../public/images/font-awesome/musicChat.png';
 import sportsLogo from '../../public/images/font-awesome/sportsChat.png';
 import moviesLogo from '../../public/images/font-awesome/moviesChat.png';
 import booksLogo from '../../public/images/font-awesome/booksChat.png';
+import techPage from '../../public/images/font-awesome/chatpagetech.png';
 // Importing Animation Libraries
 // import anime from 'animejs'
 // import animationTimings from './common/animationTimings';
@@ -42,33 +44,38 @@ class Chat extends Component {
           img: techLogo,
           _id: 1, 
           className: "techChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/'
+          url: 'localhost:3001',
+          color: '#F8DF76'
+
         }, {
           topic: "Music",
           img: musicLogo,
           _id: 2, 
           className: "musicChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat2'
-
+          url: 'localhost:3001/chat2',
+          color: '#F6B5D2'
         }, {
           topic: "Sports",
           img: sportsLogo,
           _id: 3, 
           className: "sportsChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat3'
+          url: 'localhost:3001/chat3',
+          color: '#F0D1E4'
         }, {
           topic: "Movies",
           img: moviesLogo,
           _id: 4, 
           className: "moviesChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat4'
+          url: 'localhost:3001/chat4',
+          color: '#A6D1F0'
         },
         {
           topic: "Books",
           img: booksLogo,
           _id: 5, 
           className: "booksChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat5'
+          url: 'localhost:3001/chat5',
+          color: '#AFD794'
         }]
     };
 
@@ -109,7 +116,8 @@ class Chat extends Component {
 
     if (isLoggedIn === false) {
       return (
-        <div>
+        <div className = 'chatMain'>
+        <img src={loginlogo} alt="chatr" className="center loginLogo"/>
           <div className="Login" >
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email" bsSize="large">
@@ -141,9 +149,9 @@ class Chat extends Component {
           </div>
           <div className="footer"></div>
           {/* Hidden Chat DIVS */}
-          <div id="chatBar" class="hidden">
+          {/* <div id="chatBar" class="hidden">
               <p>This is my chatBar div!</p>
-          </div>
+          </div> */}
       </div>
     );
     } else {
@@ -152,7 +160,7 @@ class Chat extends Component {
       <div className="chatMain">
       <img src={logo} alt="chatr" className="center"/>
       <div>
-        <Row style={{display: 'flex', justifyContent: 'center'}}>
+        <Row style={{display: 'flex', justifyContent: 'center', marginBottom: '5em'}}>
  {this.state.category.map(topic => (
           <Col size="xs-12 md-6 lg-4 xl-4">
             <Jumbotron cardimage={topic.img} className={topic.className} chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
