@@ -39,33 +39,33 @@ class Chat extends Component {
           img: techLogo,
           _id: 1, 
           className: "techChat",
-          url: 'http://localhost:3000/'
+          url: 'http://localhost:3001/'
         }, {
           topic: "Music",
           img: musicLogo,
           _id: 2, 
           className: "musicChat",
-          url: 'http://localhost:3000/chat2'
+          url: 'http://localhost:3001/chat2'
 
         }, {
           topic: "Sports",
           img: sportsLogo,
           _id: 3, 
           className: "sportsChat",
-          url: 'http://localhost:3000/chat3'
+          url: 'http://localhost:3001/chat3'
         }, {
           topic: "Movies",
           img: moviesLogo,
           _id: 4, 
           className: "moviesChat",
-          url: 'http://localhost:3000/chat4'
+          url: 'http://localhost:3001/chat4'
         },
         {
           topic: "Books",
           img: booksLogo,
           _id: 5, 
           className: "booksChat",
-          url: 'http://localhost:3000/chat5'
+          url: 'http://localhost:3001/chat5'
         }]
     };
 
