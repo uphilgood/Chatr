@@ -17,9 +17,9 @@ app.use(bodyParser.json());
 // });
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
+// if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-}
+// }
 
 // Start the API server
 const server = app.listen(PORT, function() {
