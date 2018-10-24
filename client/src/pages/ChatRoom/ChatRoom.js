@@ -8,7 +8,7 @@ class ChatRoom extends React.Component{
         super(props);
 
         this.state = {
-            username: '',
+            username: props.user,
             message: '',
             messages: [],
             url: props.usethisurl,
@@ -28,14 +28,20 @@ class ChatRoom extends React.Component{
         };
 
         this.sendMessage = ev => {
-            ev.preventDefault();
-            this.socket.emit('SEND_MESSAGE', {
-                author: this.props.user,
-                message: this.state.message
-            })
-            this.setState({message: ''})
+            if (this.state.message.length !== 0) {
+                ev.preventDefault();
+                this.socket.emit('SEND_MESSAGE', {
+                    author: this.props.user,
+                    message: this.state.message
+                })
+                this.setState({ message: '' })
 
-        }
+            } else {
+                alert("You Must Type a Message First!")
+                ev.preventDefault();
+                this.setState({ message: this.state.message })
+            }
+        } 
 
         this.onKeyPress = (e) => {
             if(e.which === 13) {
@@ -70,9 +76,9 @@ class ChatRoom extends React.Component{
                             </div>
                         </div>
                         <div className="card-action">
-                            <input type="text" placeholder={this.props.user} value={this.props.user} onChange={ev => this.setState({ username: ev.target.value })} className="form-control" id="usernamefield" />
+                            {/* <input type="text" placeholder={this.props.user} value={this.props.user} onChange={ev => this.setState({ username: ev.target.value })} className="form-control" id="usernamefield" /> */}
                             <br />
-                            <input onKeyPress={this.onKeyPress} type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} className="form-control" />
+                            <textarea onKeyPress={this.onKeyPress} type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} className="form-control" />
                             <br />
                             <button type="submit" onClick={this.sendMessage} className="waves-effect btn chatBox-send">Send</button>
 
