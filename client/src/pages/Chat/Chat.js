@@ -30,8 +30,7 @@ class Chat extends Component {
   constructor(props) {
     super(props);
 
-
-  const PORT = process.env.PORT || 3001;
+    
 
     this.state = {
       email: "",
@@ -43,13 +42,13 @@ class Chat extends Component {
           img: techLogo,
           _id: 1, 
           className: "techChat",
-          url: PORT
+          url: 'https://cryptic-wave-62324.herokuapp.com/'
         }, {
           topic: "Music",
           img: musicLogo,
           _id: 2, 
           className: "musicChat",
-          url: PORT + '/chat2'
+          url: 'https://cryptic-wave-62324.herokuapp.com/chat2'
 
         }, {
           topic: "Sports",
