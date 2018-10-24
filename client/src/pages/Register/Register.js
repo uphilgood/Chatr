@@ -39,7 +39,7 @@ class Register extends Component {
             alert("User Already Exists")
         } else {
           alert("Thanks for signing up!  You'll be redirected to the login now!")
-          this.props.history.push('/')
+          // this.props.history.push('/')
         }
     }
      
