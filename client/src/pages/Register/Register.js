@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../Chat/Chat.css"
 import API from "../../utils/API";
+import logo from "../../public/images/chatr-signup.png";
 import { Link } from "react-router-dom";
-
-
 
 class Register extends Component {
   constructor(props) {
@@ -50,6 +49,8 @@ class Register extends Component {
 
   render() {
     return (
+        <div className = 'chatMain'>
+        <img src={logo} alt="chatr" className="center logo"/>
         <div className="Login">
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
@@ -77,6 +78,7 @@ class Register extends Component {
           > Register
           </Button>
         </form>
+      </div>
       </div>
     );
   }

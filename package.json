@@ -27,6 +27,7 @@
     "http-proxy-middleware": "^0.19.0",
     "if-env": "^1.0.4",
     "mongoose": "^5.0.17",
+    "react-dialog": "^1.0.2",
     "react-flippy": "^0.1.2",
     "react-form-login": "^1.1.4",
     "react-materialize": "^2.4.6",
