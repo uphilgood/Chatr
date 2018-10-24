@@ -2,7 +2,6 @@ import React from "react";
 import {Card, CardTitle, Modal} from 'react-materialize';
 import ChatRoom from "../../pages/ChatRoom/ChatRoom";
 import '../../pages/Chat/Chat.css';
-import Dialog from 'react-dialog';
 
 const Jumbotron = (props) => (
 
