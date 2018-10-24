@@ -40,10 +40,10 @@ class ChatRoom extends React.Component{
 
     render(){
         return (
-            <div className="container" >
+            <div className="container modal-container" >
                 <div className="row">
                     <div className="col s6 m6">
-                        <div className="card">
+                        <div className="card modal-card">
                             <div className="card-body">
                                 <div className="card-title chatBox-title valign center" style={{color: this.props.color}}>{this.props.currenttopic}</div>
                                 <hr />
@@ -52,7 +52,7 @@ class ChatRoom extends React.Component{
                                 {this.state.messages.map(message => {
                                     return (
                                         <Row>
-                                            <Col s={12}>
+                                            <Col s={12} style={{margin: '0 15px 0 15px', width: '15em'}}>
                                                 <Chip key={message.username}>
                                                     {message.author}
                                                 </Chip>

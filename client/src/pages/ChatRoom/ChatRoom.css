@@ -39,10 +39,15 @@ input {
     margin: auto;
     display: block;
     margin-top: -25px;
+    background: #3c76aa;
 }
 
 .chatBox-send:focus {
-    background:#3c76aa;
+    background:#272A33;
+}
+
+.chatBox-send:send {
+    background: #3c76aa;
 }
 
 /* This is the messaging text that you send */
@@ -50,8 +55,12 @@ input {
     background: #3FACFC;
     color: white;
     font-weight: bold;
-    margin: 0 8px 0 8px;
+    margin-right: 1em;
 }
+
+/* .modal-content {
+    background:red !important;
+} */
 
 #usernamefield, .form-control {
     background: rgba(255,255,255, 0.8) !important;
@@ -85,7 +94,10 @@ input {
     /* background-image: url("../../public/images/font-awesome/android-brands.svg"), url("../../public/images/font-awesome/apple-brands.svg"), url("../../public/images/font-awesome/book-solid.svg"), url("../../public/images/font-awesome/cat-solid.svg"), url("../../public/images/font-awesome/dog-solid.svg"), url("../../public/images/font-awesome/football-ball-solid.svg"), url("../../public/images/font-awesome/futbol-solid.svg"), url("../../public/images/font-awesome/glasses-solid.svg"), url("../../public/images/font-awesome/twitch-brands.svg"), url("../../public/images/font-awesome/css3-alt-brands.svg");
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%; */
-    background-image: url("../../public/images/font-awesome/movie1.png"), url("../../public/images/font-awesome/movie2.png"), url("../../public/images/font-awesome/book1.png"), url("../../public/images/font-awesome/tech1.png"), url("../../public/images/font-awesome/sports2.png"), url("../../public/images/font-awesome/book2.png"), url("../../public/images/font-awesome/tech2.png"), url("../../public/images/font-awesome/music2.png"), url("../../public/images/font-awesome/music1.png"), url("../../public/images/font-awesome/sports1.png"), url("../../public/images/font-awesome/tech3.png"), url("../../public/images/font-awesome/music3.png");
+    background-image: url("../../public/images/font-awesome/music3.png"), url("../../public/images/font-awesome/tech3.png"), url("../../public/images/font-awesome/sports1.png"), 
+    url("../../public/images/font-awesome/music1.png"), url("../../public/images/font-awesome/music2.png"), url("../../public/images/font-awesome/tech2.png"),  
+    url("../../public/images/font-awesome/book2.png"),  url("../../public/images/font-awesome/sports2.png"),  url("../../public/images/font-awesome/tech1.png"), 
+    url("../../public/images/font-awesome/book1.png"),  url("../../public/images/font-awesome/movie2.png"), url("../../public/images/font-awesome/movie1.png");
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   }
 
@@ -98,3 +110,21 @@ input {
     0%, 100% { background-size: 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%;}
     50% {      background-size: 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%, 4%, 3.5%;}
   }
+
+  .modal {
+      margin-top: -.1em !important;
+      width: 65% !important;
+      max-height: 80%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+  }
+
+  .modal-card {
+    min-height: 13em;
+    background: rgba(255,255,255, 0.8) !important;
+  }
+
+  .modal-container {
+    width: 85%;
+  }
+

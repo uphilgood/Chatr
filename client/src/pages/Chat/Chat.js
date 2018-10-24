@@ -11,6 +11,7 @@ import "./Chat.css";
 import ReactDOM from 'react-dom';
 // import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import ChatRoom from "../ChatRoom/ChatRoom";
+import loginlogo from "../../public/images/chatr-login.png";
 import logo from "../../public/images/chatr-logo.png";
 import techLogo from '../../public/images/font-awesome/techChat.png';
 import musicLogo from '../../public/images/font-awesome/musicChat.png';
@@ -111,7 +112,8 @@ class Chat extends Component {
 
     if (isLoggedIn === false) {
       return (
-        <div>
+        <div className = 'chatMain'>
+        <img src={loginlogo} alt="chatr" className="center loginLogo"/>
           <div className="Login" >
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email" bsSize="large">
@@ -143,9 +145,9 @@ class Chat extends Component {
           </div>
           <div className="footer"></div>
           {/* Hidden Chat DIVS */}
-          <div id="chatBar" class="hidden">
+          {/* <div id="chatBar" class="hidden">
               <p>This is my chatBar div!</p>
-          </div>
+          </div> */}
       </div>
     );
     } else {
@@ -154,7 +156,7 @@ class Chat extends Component {
       <div className="chatMain">
       <img src={logo} alt="chatr" className="center"/>
       <div>
-        <Row style={{display: 'flex', justifyContent: 'center'}}>
+        <Row style={{display: 'flex', justifyContent: 'center', marginBottom: '5em'}}>
  {this.state.category.map(topic => (
           <Col size="xs-12 md-6 lg-4 xl-4">
             <Jumbotron cardimage={topic.img} className={topic.className} chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
