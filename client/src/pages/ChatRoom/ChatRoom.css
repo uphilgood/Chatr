@@ -88,17 +88,17 @@ input {
     font-family: 'Source Sans Pro', sans-serif;
     padding: 60px 0;
     min-height: 575px;
-    animation: chatrLogin 10s linear infinite, chatrScale 1s linear infinite;
+    /* animation: chatrLogin 10s linear infinite, chatrScale 1s linear infinite;
     animation-fill-mode: forwards;
-    background-color: white;
+    background-color: white; */
     /* background-image: url("../../public/images/font-awesome/android-brands.svg"), url("../../public/images/font-awesome/apple-brands.svg"), url("../../public/images/font-awesome/book-solid.svg"), url("../../public/images/font-awesome/cat-solid.svg"), url("../../public/images/font-awesome/dog-solid.svg"), url("../../public/images/font-awesome/football-ball-solid.svg"), url("../../public/images/font-awesome/futbol-solid.svg"), url("../../public/images/font-awesome/glasses-solid.svg"), url("../../public/images/font-awesome/twitch-brands.svg"), url("../../public/images/font-awesome/css3-alt-brands.svg");
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%, 4%; */
-    background-image: url("../../public/images/font-awesome/music3.png"), url("../../public/images/font-awesome/tech3.png"), url("../../public/images/font-awesome/sports1.png"), 
+    /* background-image: url("../../public/images/font-awesome/music3.png"), url("../../public/images/font-awesome/tech3.png"), url("../../public/images/font-awesome/sports1.png"), 
     url("../../public/images/font-awesome/music1.png"), url("../../public/images/font-awesome/music2.png"), url("../../public/images/font-awesome/tech2.png"),  
     url("../../public/images/font-awesome/book2.png"),  url("../../public/images/font-awesome/sports2.png"),  url("../../public/images/font-awesome/tech1.png"), 
-    url("../../public/images/font-awesome/book1.png"),  url("../../public/images/font-awesome/movie2.png"), url("../../public/images/font-awesome/movie1.png");
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    url("../../public/images/font-awesome/book1.png"),  url("../../public/images/font-awesome/movie2.png"), url("../../public/images/font-awesome/movie1.png"); */
+    /* background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat; */
   }
 
   @keyframes chatrLogin {

@@ -12,6 +12,7 @@ class Register extends Component {
     this.state = {
       email: "",
       password: "",
+      confirmPassword: "",
       _id: ""
     };
   }
@@ -29,22 +30,23 @@ class Register extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    API.registerUser({
+    if (this.state.password === this.state.confirmPassword) {
+      API.registerUser({
         username: this.state.email,
         password: this.state.password
-        })
-    .then(res => {
-        if (res.data === "already exists") {
+      })
+        .then(res => {
+          if (res.data === "already exists") {
             alert("User Already Exists")
-        } else {
-          alert("Thanks for signing up!  You'll be redirected to the login now!")
-          this.props.history.push('/')
-        }
+          } else {
+            alert("Thanks for signing up!  You'll be redirected to the login now!")
+            this.props.history.push('/')
+          }
+        })
+        .catch(err => console.log(err));
+    } else {
+      alert("Your Password Did Not Match!")
     }
-     
-
-    )
-    .catch(err => console.log(err));
   }
 
   render() {
@@ -70,6 +72,16 @@ class Register extends Component {
               type="password"
             />
           </FormGroup>
+
+           <FormGroup controlId="confirmPassword" bsSize="large">
+            <ControlLabel>Confirm Password</ControlLabel>
+            <FormControl
+              value={this.state.confirmPassword}
+              onChange={this.handleChange}
+              type="password"
+            />
+          </FormGroup>
+
           <Button
             block
             bsSize="large"

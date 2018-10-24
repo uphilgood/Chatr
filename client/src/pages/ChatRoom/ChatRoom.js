@@ -36,6 +36,12 @@ class ChatRoom extends React.Component{
             this.setState({message: ''})
 
         }
+
+        this.onKeyPress = (e) => {
+            if(e.which === 13) {
+              this.sendMessage(e);
+            }
+          }
     }
 
     render(){
@@ -66,9 +72,9 @@ class ChatRoom extends React.Component{
                         <div className="card-action">
                             <input type="text" placeholder={this.props.user} value={this.props.user} onChange={ev => this.setState({ username: ev.target.value })} className="form-control" id="usernamefield" />
                             <br />
-                            <input type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} className="form-control" />
+                            <input onKeyPress={this.onKeyPress} type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} className="form-control" />
                             <br />
-                            <button onClick={this.sendMessage} className="waves-effect btn chatBox-send">Send</button>
+                            <button type="submit" onClick={this.sendMessage} className="waves-effect btn chatBox-send">Send</button>
 
                         </div>
                     </div>
