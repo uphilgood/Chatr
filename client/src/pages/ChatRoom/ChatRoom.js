@@ -3,10 +3,6 @@ import io from "socket.io-client";
 import "./ChatRoom.css"
 import {Row, Col, Chip} from 'react-materialize'
 
-
-
-
-
 class ChatRoom extends React.Component{
     constructor(props){
         super(props);
@@ -44,12 +40,12 @@ class ChatRoom extends React.Component{
 
     render(){
         return (
-            <div className="container"  >
+            <div className="container" >
                 <div className="row">
                     <div className="col s6 m6">
                         <div className="card">
                             <div className="card-body">
-                                <div className="card-title">{this.props.currenttopic}</div>
+                                <div className="card-title chatBox-title valign center" style={{color: this.props.color}}>{this.props.currenttopic}</div>
                                 <hr />
                             </div>
                             <div className="messages">
@@ -72,7 +68,7 @@ class ChatRoom extends React.Component{
                             <br />
                             <input type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({ message: ev.target.value })} className="form-control" />
                             <br />
-                            <button onClick={this.sendMessage} className="waves-effect btn">Send</button>
+                            <button onClick={this.sendMessage} className="waves-effect btn chatBox-send">Send</button>
 
                         </div>
                     </div>

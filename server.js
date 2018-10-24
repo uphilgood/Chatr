@@ -29,7 +29,6 @@ io.on('connection', (socket) => {
     })
 });
 
-
 var nsp = io.of('/chat2');
 nsp.on('connection', function(socket){
     console.log('someone entered Chatroom2');

@@ -26,8 +26,8 @@
   }
 
   @keyframes chatrLogin {
-    0%, 100% { background-position: 70%  40%, 12% 20%, 30% 37%, 45% 90%, 82% 24%, 60% 82%, 2% 50%, 83% 70%, 2% 10%, 22% 75%, 75% 15%, 35% 7%;}
-    50% {      background-position: 65%  55%, 18% 20%, 29% 44%, 40% 80%, 92% 25%, 62% 90%, 10% 56%, 98% 78%, 5% 10%, 15% 85%, 70% 12%, 47% 13%;}
+    0%, 100% { background-position: 61%  40%, 12% 20%, 30% 37%, 45% 90%, 82% 24%, 62% 90%, 2% 50%, 83% 70%, 2% 10%, 22% 75%, 75% 15%, 35% 7%;}
+    50% {      background-position: 47%  55%, 18% 20%, 29% 44%, 40% 80%, 92% 25%, 71% 65%, 10% 56%, 98% 78%, 5% 10%, 15% 85%, 70% 12%, 47% 13%;}
   }
 
   @keyframes chatrScale {
@@ -91,7 +91,7 @@ input:not([type]):not([readonly]):focus, input[type=text]:not([readonly]):not(.b
 }
 
 .card .card-content {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: fantasy;
   color: #3c76aa;
   padding: 5px 0 10px 0;
 }
@@ -117,3 +117,10 @@ input:not([type]):not([readonly]):focus, input[type=text]:not([readonly]):not(.b
 .card {
   padding: 5px 0 10px 0;
 }
+
+.card-title {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+
