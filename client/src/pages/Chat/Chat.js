@@ -44,7 +44,7 @@ class Chat extends Component {
           img: techLogo,
           _id: 1, 
           className: "techChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/',
+          url: 'localhost:3001',
           color: '#F8DF76'
 
         }, {
@@ -52,21 +52,21 @@ class Chat extends Component {
           img: musicLogo,
           _id: 2, 
           className: "musicChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat2',
+          url: 'localhost:3001/chat2',
           color: '#F6B5D2'
         }, {
           topic: "Sports",
           img: sportsLogo,
           _id: 3, 
           className: "sportsChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat3',
+          url: 'localhost:3001/chat3',
           color: '#F0D1E4'
         }, {
           topic: "Movies",
           img: moviesLogo,
           _id: 4, 
           className: "moviesChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat4',
+          url: 'localhost:3001/chat4',
           color: '#A6D1F0'
         },
         {
@@ -74,7 +74,7 @@ class Chat extends Component {
           img: booksLogo,
           _id: 5, 
           className: "booksChat",
-          url: 'https://cryptic-wave-62324.herokuapp.com/chat5',
+          url: 'localhost:3001/chat5',
           color: '#AFD794'
         }]
     };
