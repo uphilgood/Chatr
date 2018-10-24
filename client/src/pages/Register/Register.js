@@ -3,8 +3,7 @@ import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../Chat/Chat.css"
 import API from "../../utils/API";
 import logo from "../../public/images/chatr-signup.png";
-
-
+import { Link } from "react-router-dom";
 
 class Register extends Component {
   constructor(props) {
@@ -37,10 +36,12 @@ class Register extends Component {
     .then(res => {
         if (res.data === "already exists") {
             alert("User Already Exists")
+        } else {
+          alert("Thanks for signing up!  You'll be redirected to the login now!")
+          this.props.history.push('/')
         }
     }
      
-      // {email: this.state.email, password: this.state.password}
 
     )
     .catch(err => console.log(err));

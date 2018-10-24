@@ -43,6 +43,7 @@ class Chat extends Component {
           className: "techChat",
           url: 'localhost:3001',
           color: '#F8DF76'
+
         }, {
           topic: "Music",
           img: musicLogo,
