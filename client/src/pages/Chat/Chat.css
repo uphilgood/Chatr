@@ -102,6 +102,10 @@ form {
   margin-top: -1.5em;
 }
 
+.Login form {
+  background: rgba(255, 255, 255, .8);
+}
+
 .card .card-content {
   font-family: fantasy;
   color: #3c76aa;
