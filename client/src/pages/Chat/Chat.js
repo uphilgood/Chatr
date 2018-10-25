@@ -100,8 +100,9 @@ class Chat extends Component {
       password: this.state.password
     })
       .then(res => {
-        if (res.data === "no user") {
-          alert("wrong password")
+        if (res.data === "no user" || res.data === "already exists") {
+          alert("Wrong Email/Password")
+          event.preventDefault();
         } else {
           console.log(res)
           this.setState({ isLoggedIn: true })
