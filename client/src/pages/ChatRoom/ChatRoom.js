@@ -15,11 +15,22 @@ class ChatRoom extends React.Component{
             img:''
         };
 
+        let numUsers = 0
         this.socket = io(this.state.url);
+
+
+        
 
         this.socket.on('RECEIVE_MESSAGE', function(data){
             addMessage(data);
+            console.log(data)
         });
+
+        this.socket.on('USER LOGIN', function(data) {
+            console.log(data)
+            ++numUsers
+            console.log(numUsers)
+        })
 
         const addMessage = data => {
             console.log(data);
@@ -35,6 +46,7 @@ class ChatRoom extends React.Component{
                     message: this.state.message
                 })
                 this.setState({ message: '' })
+                this.socket.emit('add user', {username: this.state.username});
 
             } else {
                 alert("You Must Type a Message First!")
@@ -69,6 +81,7 @@ class ChatRoom extends React.Component{
                                                     {message.author}
                                                 </Chip>
                                                 {message.message}
+                                                {this.numUsers}
                                             </Col>
                                         </Row>
                                     )

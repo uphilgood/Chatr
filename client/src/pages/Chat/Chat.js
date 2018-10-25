@@ -44,7 +44,7 @@ class Chat extends Component {
           img: techLogo,
           _id: 1, 
           className: "techChat",
-          url: 'cryptic-wave-62324.herokuapp.com',
+          url: 'localhost:3001',
           color: '#F8DF76'
 
         }, {
@@ -52,21 +52,21 @@ class Chat extends Component {
           img: musicLogo,
           _id: 2, 
           className: "musicChat",
-          url: 'cryptic-wave-62324.herokuapp.com/chat2',
+          url: 'localhost:3001/chat2',
           color: '#F6B5D2'
         }, {
           topic: "Sports",
           img: sportsLogo,
           _id: 3, 
           className: "sportsChat",
-          url: 'cryptic-wave-62324.herokuapp.com/chat3',
+          url: 'localhost:3001/chat3',
           color: '#F0D1E4'
         }, {
           topic: "Movies",
           img: moviesLogo,
           _id: 4, 
           className: "moviesChat",
-          url: 'cryptic-wave-62324.herokuapp.com/chat4',
+          url: 'localhost:3001/chat4',
           color: '#A6D1F0'
         },
         {
@@ -74,7 +74,7 @@ class Chat extends Component {
           img: booksLogo,
           _id: 5, 
           className: "booksChat",
-          url: 'cryptic-wave-62324.herokuapp.com/chat5',
+          url: 'localhost:3001/chat5',
           color: '#AFD794'
         }]
     };
@@ -163,7 +163,7 @@ class Chat extends Component {
       <div>
         <Row style={{display: 'flex', justifyContent: 'center', marginBottom: '5em'}}>
  {this.state.category.map(topic => (
-          <Col size="xs-12 md-6 lg-4 xl-4">
+          <Col key={topic.url} size="xs-12 md-6 lg-4 xl-4">
             <Jumbotron cardimage={topic.img} className={topic.className} chaturl={topic.url} topic={topic.topic} userinfo={this.state.email}> 
       
             </Jumbotron>

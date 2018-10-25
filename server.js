@@ -6,20 +6,14 @@ const app = express();
 const socket = require('socket.io');
 const PORT = process.env.PORT || 3001;
 
+var numUsers = 0;
+
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.use(express.static(path.join(__dirname, 'client/build')));
-
-// app.get('*', (req,res) =>{
-//     res.sendFile(path.join(__dirname+'/client/build/index.html'));
-// });
 app.use(express.static("client/build"));
-// Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
+
 // Start the API server
 const server = app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
@@ -27,13 +21,22 @@ const server = app.listen(PORT, function() {
 
 const io = socket(server);
 
+
 io.on('connection', (socket) => {
+    ++numUsers 
     console.log(socket.id);
+    console.log('someone entered Chatroom1');
+    io.emit('USER LOGIN', numUsers)
+
+    socket.on('disconnect', function(){
+        console.log('user disconnected from Chatroom1');
+    });
 
     socket.on('SEND_MESSAGE', function(data){
         io.emit('RECEIVE_MESSAGE', data);
     })
 });
+
 
 var nsp = io.of('/chat2');
 nsp.on('connection', function(socket){
