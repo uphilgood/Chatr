@@ -10,22 +10,22 @@ module.exports = {
     db.User
       .findOne({
         username: req.body.username
-      }, function (err, obj) {
+      }).then(obj => {
         console.log(obj)
-        if (err) {
-          res.json("already exists")
-        } else {
-          console.log(obj)
-          let newPassword = obj.password
+     
+      if (obj === null) {
+        res.json("already exists")
+      } else {
+        let newPassword = obj.password
           bcrypt.compare(req.body.password, newPassword).then(resp => {
             if (!resp) {
               res.json("no user")
             } else {
               res.json(resp)
             }
-          })
-        }
-      }).catch(err => res.status(422).json(err));
+      })
+    }
+  }).catch(err => res.status(422).json(err));
   },
 
   registerUser: function (req, res) {
