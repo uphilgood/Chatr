@@ -30,7 +30,7 @@ class ChatRoom extends React.Component{
             console.log(data)
             ++numUsers
             console.log(numUsers)
-        })
+        });
 
         const addMessage = data => {
             console.log(data);
@@ -53,14 +53,14 @@ class ChatRoom extends React.Component{
                 ev.preventDefault();
                 this.setState({ message: this.state.message })
             }
-        } 
+        };
 
         this.onKeyPress = (e) => {
             if(e.which === 13) {
               this.sendMessage(e);
             }
-          }
-    }
+          };
+    };
 
     render(){
         return (
